@@ -40,7 +40,7 @@ npm start
 
 
 Open in browser:
-Visit http://localhost:3000
+Visit user-management-dashboard-pi-dun.vercel.app
 
 ## Development Challenges
 
