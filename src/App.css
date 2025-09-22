@@ -1,0 +1,256 @@
+/* --- Body & Container --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Heading --- */
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: tomato;       /* vibrant heading */
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px gray;
+}
+
+/* --- Buttons --- */
+button {
+  padding: 8px 16px;
+  margin: 3px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Action buttons */
+button.save {
+  background-color: limegreen;
+  color: white;
+}
+
+button.cancel {
+  background-color: red;
+  color: white;
+}
+
+button.edit {
+  background-color: dodgerblue;
+  color: white;
+}
+
+button.delete {
+  background-color: orange;
+  color: white;
+}
+
+/* Add User & Filter buttons */
+button.add-user {
+  background-color: mediumslateblue;  /* purple */
+  color: white;
+}
+
+button.filter {
+  background-color: mediumseagreen;  /* teal/green */
+  color: white;
+}
+
+button.add-user:hover {
+  background-color: slateblue;
+}
+
+button.filter:hover {
+  background-color: seagreen;
+}
+
+/* --- Inputs --- */
+input[type="text"],
+input[type="email"] {
+  padding: 8px 12px;
+  margin: 3px 0;
+  border: 1px solid darkgray;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+
+/* --- Form --- */
+form {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input {
+  flex: 1 1 200px;
+}
+
+form button {
+  flex: 0 0 auto;
+}
+
+/* --- Table --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+
+th {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+th:hover {
+  background-color: darkslategray;
+}
+
+tr:hover {
+  background-color: gainsboro;
+}
+
+tr.editing {
+  background-color: lightyellow;
+  transition: background 0.2s;
+}
+
+/* --- Pagination --- */
+select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid darkgray;
+}
+
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* --- Search & Filter bar --- */
+.search-filter {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-filter input {
+  flex: 1 1 200px;
+}
+
+.filter-box {
+  margin-bottom: 15px;
+  border: 1px solid gray;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: lightgray;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  form input {
+    flex: 1 1 100%;
+  }
+
+  .search-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+
+  td:last-child {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    flex-basis: 40%;
+  }
+}
+
