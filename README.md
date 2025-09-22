@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 **# **User Management Dashboard****
 
 I have implemented the React-based User Management Dashboard with features like Add/Edit/Delete users, inline editing, search, filter, sorting, pagination, and responsive design.
@@ -78,4 +78,4 @@ Sorting, search, and filter work in combination with pagination.
 =======
 # user-management-dashboard
 Simple web application where users can view, add, edit, and delete user details from a mock backend API.
->>>>>>> c8db8d3f292570623104ee47adad05d032f97b66
+
