@@ -74,8 +74,5 @@ All CRUD operations are client-side only for this version.
 
 User IDs are dynamically generated to maintain ascending order even after deletions.
 
-Sorting, search, and filter work in combination with pagination.
-=======
-# user-management-dashboard
-Simple web application where users can view, add, edit, and delete user details from a mock backend API.
+
 
